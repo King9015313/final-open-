@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", "Source Serif 4", serif;
+  --font-sans: "Helvetica Neue", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FDFBF7;
+  color: #1A252F;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, .font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Subtle book 3D realistic perspective styles */
+.book-shadow {
+  box-shadow: -15px 20px 40px -10px rgba(26, 37, 47, 0.28), -4px 6px 12px -2px rgba(26, 37, 47, 0.12), inset -2px 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.binder-spine {
+  background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.2) 60%, rgba(255,255,255,0.08) 100%);
+}
+
+.page-edge {
+  background: repeating-linear-gradient(
+    to bottom,
+    #f8f5ed,
+    #f8f5ed 2px,
+    #ece6d8 3px,
+    #ece6d8 4px
+  );
+}
+
+/* Range input thumb styling for sleek micro-interactions */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 9999px;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0E3B33;
+  border: 2px solid #B8860B;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 6px rgba(14, 59, 51, 0.35);
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.05);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0E3B33;
+  border: 2px solid #B8860B;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 6px rgba(14, 59, 51, 0.35);
+}
+
+/* Micro-interaction card and button utility helpers */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(26, 37, 47, 0.12), 0 6px 16px -4px rgba(26, 37, 47, 0.07);
+}
+
+/* Dedicated pricing card hover lifts with rich shadow spread */
+.pricing-card-standard {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+.pricing-card-standard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 42px -10px rgba(26, 37, 47, 0.15), 0 10px 20px -5px rgba(26, 37, 47, 0.08);
+}
+
+.pricing-card-premium {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+@media (min-width: 768px) {
+  .pricing-card-premium {
+    transform: translateY(-8px);
+  }
+  .pricing-card-premium:hover {
+    transform: translateY(-14px);
+    box-shadow: 0 28px 56px -12px rgba(14, 59, 51, 0.52), 0 0 30px 2px rgba(184, 134, 11, 0.3);
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-card-premium:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 44px -10px rgba(14, 59, 51, 0.45), 0 0 24px 2px rgba(184, 134, 11, 0.25);
+  }
+}
+
+.btn-interactive {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.btn-interactive:hover {
+  transform: translateY(-1px);
+}
+
+.btn-interactive:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Smooth editorial staggered fade-in animation */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade-up {
+  opacity: 0;
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
