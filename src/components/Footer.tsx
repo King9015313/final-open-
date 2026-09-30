@@ -9,14 +9,14 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-8 pb-10 border-b border-white/10">
           
           <div className="space-y-3 max-w-sm">
-            <span className="font-serif font-bold text-xl text-white tracking-tight block">
-              CLIENT READY
+            <span className="font-sans font-black text-lg text-white tracking-[0.08em] uppercase block">
+              DIGITALASSETSUITE
             </span>
             <p className="text-stone-400 text-xs leading-relaxed">
               The 30-Day Client Acquisition System & Implementation Workbook for Indian freelancers ready to build sustainable client rosters and high-paying retainers.
             </p>
             <p className="text-stone-500 text-[11px] font-mono">
-              Prepared by Himanshu Manjhi · 2026 Edition
+              HM Digital Studio Store · Prepared by Himanshu Manjhi
             </p>
           </div>
 

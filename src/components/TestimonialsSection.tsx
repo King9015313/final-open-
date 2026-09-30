@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollReveal } from './ScrollReveal';
+import { TypewriterHeading } from './TypewriterHeading';
 
 interface Testimonial {
   id: string;
@@ -78,7 +79,8 @@ export const TestimonialsSection: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-gradient-to-b from-[#0F1722] via-[#141E2B] to-[#0D141E] text-stone-100 relative overflow-hidden border-t border-b border-stone-800"
+      className="py-24 bg-[#333333] text-stone-100 relative overflow-hidden border-t border-b border-[#9f371e]"
+      style={{ backgroundColor: '#333333', borderColor: '#9f371e' }}
     >
       {/* Background ambient lighting accents */}
       <div
@@ -96,11 +98,14 @@ export const TestimonialsSection: React.FC = () => {
               <span>Client Acquisition Case Studies</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
-              Proven By Freelancers Who Closed High-Ticket Clients
-            </h2>
+            <TypewriterHeading
+              text="Proven By Freelancers Who Closed High-Ticket Clients"
+              className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#66fa48] tracking-[-0.02em] leading-[1.15] [text-wrap:balance]"
+              contrastMode="gold"
+              textColor="#66fa48"
+            />
 
-            <p className="mt-4 text-base sm:text-lg text-stone-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-stone-300 leading-[1.65] max-w-2xl mx-auto font-sans">
               Real testimonials from Indian freelancers who replaced random cold pitching with our battle-tested system—landing high-ticket retainers with zero price bargaining.
             </p>
 
@@ -113,9 +118,9 @@ export const TestimonialsSection: React.FC = () => {
                   </svg>
                 ))}
               </div>
-              <span className="font-bold text-white">4.8 / 5.0 Average Rating</span>
+              <span className="font-bold text-white font-mono">4.8 / 5.0 Average Rating</span>
               <span className="text-stone-600">·</span>
-              <span>438+ Clients in Action</span>
+              <span className="font-mono">438+ Clients in Action</span>
               <span className="text-stone-600">·</span>
               <span className="text-emerald-400 font-medium">✓ Verified Client Outcomes</span>
             </div>
@@ -129,7 +134,7 @@ export const TestimonialsSection: React.FC = () => {
 
             return (
               <ScrollReveal key={item.id} delayMs={idx * 120} className="h-full">
-                <div className="group relative rounded-xl bg-gradient-to-b from-[#182330] via-[#141D28] to-[#101720] border border-stone-700/60 hover:border-[#D4AF37]/50 shadow-xl hover:shadow-2xl transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between h-full hover:-translate-y-1">
+                <div className="group relative rounded-2xl bg-gradient-to-b from-[#182330]/95 via-[#141D28]/95 to-[#101720]/95 backdrop-blur-xs border border-stone-700/60 hover:border-[#D4AF37]/60 shadow-xl hover:shadow-2xl transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between h-full hover:-translate-y-1.5">
                   
                   {/* Subtle decorative top accent line */}
                   <div

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ScrollReveal } from './ScrollReveal';
+import { TypewriterHeading } from './TypewriterHeading';
 
 export const ProblemSection: React.FC = () => {
   const [selectedObjection, setSelectedObjection] = useState<number | null>(0);
@@ -32,64 +33,71 @@ export const ProblemSection: React.FC = () => {
   ];
 
   return (
-    <section id="problem" className="py-20 bg-stone-100/60 border-y border-[#1A252F]/10">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+    <section id="problem" className="py-24 bg-stone-100/70 texture-subtle-grid border-y border-[#1A252F]/10 relative overflow-hidden">
+      {/* Subtle ambient lighting texture */}
+      <div 
+        aria-hidden="true"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-72 bg-gradient-to-b from-[#B8860B]/6 via-transparent to-transparent blur-3xl pointer-events-none rounded-full"
+      />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8860B] mb-3">
               The Reality Check
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#1A252F] tracking-tight [text-wrap:balance]">
-              You Have The Skills. Why Is Your Inbox Empty?
-            </h2>
-            <p className="mt-4 text-base sm:text-lg text-stone-600 font-sans">
+            <TypewriterHeading
+              text="You Have The Skills. Why Is Your Inbox Empty?"
+              className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#1A252F] tracking-[-0.02em] leading-[1.15] [text-wrap:balance]"
+            />
+            <p className="mt-4 text-base sm:text-lg text-stone-600 font-sans leading-[1.65]">
               You know how to write, edit, design, or code. Yet client acquisition feels like shouting into an empty void.
             </p>
           </div>
         </ScrollReveal>
 
         {/* 3 Core Pain Points Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           
           <ScrollReveal delayMs={100} className="h-full">
-            <div className="bg-[#FDFBF7] p-7 rounded-lg border border-stone-200/80 shadow-2xs space-y-3 h-full hover-lift hover:border-stone-300">
-              <div className="w-10 h-10 rounded-full bg-red-50 text-red-700 flex items-center justify-center font-serif font-bold text-lg transition-transform duration-200 hover:scale-110">
+            <div className="card-interactive bg-[#FDFBF7] p-7 rounded-xl border border-stone-200/90 shadow-xs space-y-3.5 h-full group">
+              <div className="w-11 h-11 rounded-full bg-red-50 text-red-700 flex items-center justify-center font-serif font-bold text-lg transition-transform duration-300 group-hover:scale-110 shadow-2xs">
                 01
               </div>
-              <h3 className="text-lg font-serif font-bold text-[#1A252F]">
+              <h3 className="text-lg font-serif font-bold text-[#1A252F] tracking-tight leading-snug">
                 The Marketplace Black Hole
               </h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
+              <p className="text-sm text-stone-600 leading-relaxed font-sans">
                 Sending 50 proposals on Upwork, Fiverr, or LinkedIn job boards and getting zero replies while competing against 200 desperate bids undercutting each other.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delayMs={200} className="h-full">
-            <div className="bg-[#FDFBF7] p-7 rounded-lg border border-stone-200/80 shadow-2xs space-y-3 h-full hover-lift hover:border-stone-300">
-              <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-800 flex items-center justify-center font-serif font-bold text-lg transition-transform duration-200 hover:scale-110">
+            <div className="card-interactive bg-[#FDFBF7] p-7 rounded-xl border border-stone-200/90 shadow-xs space-y-3.5 h-full group">
+              <div className="w-11 h-11 rounded-full bg-amber-50 text-amber-800 flex items-center justify-center font-serif font-bold text-lg transition-transform duration-300 group-hover:scale-110 shadow-2xs">
                 02
               </div>
-              <h3 className="text-lg font-serif font-bold text-[#1A252F]">
+              <h3 className="text-lg font-serif font-bold text-[#1A252F] tracking-tight leading-snug">
                 The Indian Pricing Ghosting
               </h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
+              <p className="text-sm text-stone-600 leading-relaxed font-sans">
                 Indian clients chatting warmly until you state your rate, then instantly ghosting or saying: <em>"We have someone doing this for ₹500."</em> So you freeze and underquote by 40%.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delayMs={300} className="h-full">
-            <div className="bg-[#FDFBF7] p-7 rounded-lg border border-stone-200/80 shadow-2xs space-y-3 h-full hover-lift hover:border-stone-300">
-              <div className="w-10 h-10 rounded-full bg-stone-100 text-stone-700 flex items-center justify-center font-serif font-bold text-lg transition-transform duration-200 hover:scale-110">
+            <div className="card-interactive bg-[#FDFBF7] p-7 rounded-xl border border-stone-200/90 shadow-xs space-y-3.5 h-full group">
+              <div className="w-11 h-11 rounded-full bg-stone-100 text-stone-700 flex items-center justify-center font-serif font-bold text-lg transition-transform duration-300 group-hover:scale-110 shadow-2xs">
                 03
               </div>
-              <h3 className="text-lg font-serif font-bold text-[#1A252F]">
+              <h3 className="text-lg font-serif font-bold text-[#1A252F] tracking-tight leading-snug">
                 The "No-Portfolio" Paralysis
               </h3>
-              <p className="text-sm text-stone-600 leading-relaxed">
+              <p className="text-sm text-stone-600 leading-relaxed font-sans">
                 Feeling 'unqualified' because you don't have a giant portfolio yet, spending weeks polishing invisible personal projects instead of reaching out to paying clients.
               </p>
             </div>

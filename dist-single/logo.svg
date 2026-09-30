@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Dark Navy Gradient for H and Text -->
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182A40"/>
+      <stop offset="45%" stop-color="#0E1A29"/>
+      <stop offset="100%" stop-color="#08101C"/>
+    </linearGradient>
+
+    <!-- Bevel light edge for H -->
+    <linearGradient id="navyHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D4668"/>
+      <stop offset="100%" stop-color="#0E1A29"/>
+    </linearGradient>
+
+    <!-- Rich Polished Metallic Gold Gradient for M -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DCAE3A"/>
+      <stop offset="22%" stop-color="#FDF0C0"/>
+      <stop offset="42%" stop-color="#E1B443"/>
+      <stop offset="68%" stop-color="#9C731A"/>
+      <stop offset="85%" stop-color="#FCE6A3"/>
+      <stop offset="100%" stop-color="#73520E"/>
+    </linearGradient>
+
+    <!-- Gold Face Highlight for Left Diagonal of M -->
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFF3D0"/>
+      <stop offset="40%" stop-color="#F2CB68"/>
+      <stop offset="100%" stop-color="#C29227"/>
+    </linearGradient>
+
+    <!-- Gold Shadow Face for Center Crease of M -->
+    <linearGradient id="goldShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A5791E"/>
+      <stop offset="50%" stop-color="#795610"/>
+      <stop offset="100%" stop-color="#553A08"/>
+    </linearGradient>
+
+    <!-- Arched Swoosh Upper Golden Ribbon -->
+    <linearGradient id="swooshGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F1CE70"/>
+      <stop offset="35%" stop-color="#FFF5D8"/>
+      <stop offset="65%" stop-color="#DFB140"/>
+      <stop offset="100%" stop-color="#A67B1E"/>
+    </linearGradient>
+
+    <!-- Swoosh Under-Curve Accent Ribbon (Dark Navy) -->
+    <linearGradient id="swooshUnder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1523"/>
+      <stop offset="60%" stop-color="#050B13"/>
+      <stop offset="100%" stop-color="#02050A"/>
+    </linearGradient>
+
+    <!-- Drop Shadow for Subtle Depth -->
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#subtleGlow)">
+    <!-- ==================== LETTER "H" (Dark Navy) ==================== -->
+    <!-- Left Upright Stem of H with Serifs -->
+    <path d="
+      M 95,152
+      C 105,152 138,150 142,166
+      L 142,358
+      C 138,374 105,372 95,372
+      L 95,382
+      L 208,382
+      L 208,372
+      C 198,372 166,374 162,358
+      L 162,166
+      C 166,150 198,152 208,152
+      L 208,142
+      L 95,142
+      Z" 
+      fill="url(#navyGrad)" 
+    />
+
+    <!-- Right Upright Stem of H with Serifs -->
+    <path d="
+      M 234,152
+      C 244,152 277,150 281,166
+      L 281,358
+      C 277,374 244,372 234,372
+      L 234,382
+      L 332,382
+      L 332,372
+      C 322,372 305,374 301,358
+      L 301,166
+      C 305,150 322,152 332,152
+      L 332,142
+      L 234,142
+      Z" 
+      fill="url(#navyGrad)" 
+    />
+
+    <!-- Crossbar of H -->
+    <path d="
+      M 160,256
+      L 282,256
+      L 282,282
+      L 160,282
+      Z" 
+      fill="url(#navyGrad)" 
+    />
+
+    <!-- Bevel highlight on H left stem -->
+    <path d="
+      M 142,166
+      L 146,170
+      L 146,354
+      L 142,358
+      Z" 
+      fill="url(#navyHighlight)" 
+      opacity="0.6"
+    />
+
+    <!-- ==================== LETTER "M" (Metallic Gold) ==================== -->
+    <!-- Left Diagonal Main Face of M -->
+    <path d="
+      M 308,146
+      L 374,324
+      L 364,328
+      L 292,158
+      Z" 
+      fill="url(#goldLight)" 
+    />
+
+    <!-- Center Fold Facet of M (Descending left diagonal thick blade) -->
+    <path d="
+      M 308,146
+      L 374,324
+      L 396,268
+      L 358,166
+      C 350,150 328,148 308,146
+      Z" 
+      fill="url(#goldGrad)" 
+    />
+
+    <!-- Center Fold Shadow Facet of M -->
+    <path d="
+      M 374,324
+      L 438,150
+      L 420,150
+      L 364,302
+      Z" 
+      fill="url(#goldShadow)" 
+    />
+
+    <!-- Right Diagonal & Leg of M with Top & Bottom Serifs -->
+    <path d="
+      M 425,142
+      L 508,142
+      L 508,152
+      C 498,152 485,150 481,166
+      L 481,358
+      C 485,374 498,372 508,372
+      L 508,382
+      L 402,382
+      L 402,372
+      C 412,372 432,374 436,358
+      L 436,212
+      L 374,324
+      L 438,150
+      Z" 
+      fill="url(#goldGrad)" 
+    />
+
+    <!-- Right Serifs of M -->
+    <path d="
+      M 481,166
+      L 481,358
+      C 485,374 498,372 510,372
+      L 510,382
+      L 410,382
+      L 410,372
+      C 422,372 438,374 442,358
+      L 442,166
+      C 438,150 422,152 410,152
+      L 410,142
+      L 510,142
+      L 510,152
+      C 498,152 485,150 481,166
+      Z" 
+      fill="url(#goldGrad)" 
+    />
+
+    <!-- ==================== ARCHED SWOOSH ==================== -->
+    <!-- Lower Navy Accent Curve of Swoosh -->
+    <path d="
+      M 112,356
+      C 135,280 205,214 366,326
+      C 364,310 240,195 112,356
+      Z" 
+      fill="url(#swooshUnder)" 
+    />
+
+    <!-- Main Gold Upper Arched Swoosh Ribbon -->
+    <path d="
+      M 80,360
+      C 118,258 226,190 372,328
+      C 376,316 380,296 370,270
+      C 230,172 120,248 80,360
+      Z" 
+      fill="url(#swooshGrad)" 
+    />
+  </g>
+
+  <!-- ==================== TYPOGRAPHY ==================== -->
+  <!-- "DIGITAL STUDIO" -->
+  <text 
+    x="300" 
+    y="442" 
+    text-anchor="middle" 
+    fill="#0C1826" 
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', sans-serif" 
+    font-size="39" 
+    font-weight="800" 
+    letter-spacing="0.14em"
+  >
+    DIGITAL STUDIO
+  </text>
+
+  <!-- Left Horizontal Accent Line for STORE -->
+  <line 
+    x1="115" 
+    y1="478" 
+    x2="212" 
+    y2="478" 
+    stroke="url(#goldGrad)" 
+    stroke-width="3" 
+    stroke-linecap="round"
+  />
+
+  <!-- "STORE" -->
+  <text 
+    x="300" 
+    y="488" 
+    text-anchor="middle" 
+    fill="url(#goldGrad)" 
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', sans-serif" 
+    font-size="28" 
+    font-weight="700" 
+    letter-spacing="0.32em"
+  >
+    STORE
+  </text>
+
+  <!-- Right Horizontal Accent Line for STORE -->
+  <line 
+    x1="388" 
+    y1="478" 
+    x2="485" 
+    y2="478" 
+    stroke="url(#goldGrad)" 
+    stroke-width="3" 
+    stroke-linecap="round"
+  />
+</svg>

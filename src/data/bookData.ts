@@ -8,11 +8,11 @@ export const PRICING_TIERS: PricingTier[] = [
     originalPrice: 1499,
     target: 'Beginners on a tight budget wanting immediate traction',
     features: [
-      'Core Client Acquisition System Ebook (80 Pages)',
-      '30-Day Implementation Workbook with Daily Missions',
-      '10 Ready-to-Use Email & DM Outreach Templates',
-      'Standard Freelance Contract & Invoice Templates',
-      'Lifetime Access to Future Updates'
+      '80-Page Core Client Acquisition System Manual',
+      '30-Day Guided Implementation & Daily Missions Workbook',
+      'High-Conversion Outreach Frameworks & Scripts',
+      'Professional Service Agreement & Invoice Frameworks',
+      'Lifetime Access to all Future Updates'
     ],
     cta: 'Start With Basics'
   },
@@ -22,15 +22,15 @@ export const PRICING_TIERS: PricingTier[] = [
     price: 999,
     originalPrice: 2999,
     popular: true,
-    highlight: 'Most Popular · Best Value',
+    highlight: 'MOST POPULAR - BEST VALUE',
     target: 'Ambitious Freelancers ready to scale to ₹1L+/month',
     features: [
-      'Everything included in Starter Edition',
-      'Bonus: Client Onboarding Checklists (First 48 Hours SOP)',
-      'Bonus: Advanced Rate Calculator & 15% Buffer Worksheet',
-      'Bonus: Retainer Pitch & Scope Creep Protection Templates',
-      'Advanced Chapters: Retention, Referrals & Agency Transition',
-      'Priority Email Support & Resource Vault Access'
+      'Everything in the Starter Edition',
+      'Client Onboarding SOP & Checklist (First 48 Hours)',
+      'Advanced Financial Calculator & Buffer Worksheet',
+      'Strategic Retainer Pitch & Scope Protection Frameworks',
+      'Advanced Agency Modules: Client Retention, Referrals & Transition',
+      'Priority Support & Resource Vault Access'
     ],
     cta: 'Get The Premium System'
   },
@@ -40,7 +40,7 @@ export const PRICING_TIERS: PricingTier[] = [
     price: 899,
     originalPrice: 4498,
     popular: true,
-    highlight: '⚡ Strictly First 500 Clients · 80% OFF',
+    highlight: 'STRICTLY FIRST 500 CLIENTS - 80% OFF',
     target: 'Starter + Premium Editions All-In-One Bundle',
     features: [
       'Both Starter Edition & Premium Edition Included',

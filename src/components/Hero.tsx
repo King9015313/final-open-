@@ -1,5 +1,6 @@
 import React from 'react';
 import { Book3D } from './Book3D';
+import { AnimatedHeadline } from './AnimatedHeadline';
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -21,30 +22,22 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick, onPreviewClick }) => {
           {/* Left Column: Copy & Authority (7 cols on desktop) */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Context line with clean typographic separator (No pill badges) */}
+            {/* Header Tagline Area: Premium Capitalized Ecosystem Tagline */}
             <div 
-              className="animate-hero-fade-up flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-[#B8860B] font-semibold"
+              className="animate-hero-fade-up inline-flex items-center gap-2 text-xs sm:text-[13px] uppercase tracking-[0.22em] font-sans font-bold text-[#B8860B]"
               style={{ animationDelay: '100ms' }}
             >
-              <span>For Indian Freelancers</span>
-              <span aria-hidden="true">·</span>
-              <span>Writers</span>
-              <span aria-hidden="true">·</span>
-              <span>Editors</span>
-              <span aria-hidden="true">·</span>
-              <span>Designers</span>
-              <span aria-hidden="true">·</span>
-              <span>Developers</span>
+              <span className="text-[#D4AF37] text-xs" aria-hidden="true">✦</span>
+              <span className="tracking-[0.2em] font-extrabold text-[#9C731A] dark:text-[#D4AF37]">
+                THE ULTIMATE ECOSYSTEM FOR HIGH-VALUE FREELANCERS
+              </span>
+              <span className="text-[#D4AF37] text-xs" aria-hidden="true">✦</span>
             </div>
 
-            {/* Headline */}
-            <h1 
-              className="animate-hero-fade-up text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#1A252F] leading-[1.12] tracking-tight [text-wrap:balance]"
-              style={{ animationDelay: '250ms' }}
-            >
-              Stop Chasing Clients. <br />
-              <span className="italic text-[#0E3B33]">Start Closing Them.</span>
-            </h1>
+            {/* Visually Stunning & Dynamic Animated Headline (Professional Blue & Vibrant Orange) */}
+            <div className="animate-hero-fade-up" style={{ animationDelay: '250ms' }}>
+              <AnimatedHeadline />
+            </div>
 
             {/* Sub-headline */}
             <p 
@@ -136,15 +129,15 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick, onPreviewClick }) => {
               className="absolute w-72 h-72 rounded-full bg-[#B8860B]/10 filter blur-3xl pointer-events-none" 
             />
 
-            <Book3D onOpenPreview={onPreviewClick} edition="client-ready" />
+            <Book3D onOpenPreview={onPreviewClick} edition="complete" />
 
             {/* Tactile deliverable breakdown tag underneath book */}
-            <div className="mt-6 text-center">
+            <div className="mt-4 text-center">
               <p className="text-xs font-serif italic text-stone-600">
-                80-Page System Manual + 30 Daily Worksheets + 12 Outreach Scripts
+                Interactive 3D Edition Studio · Switch between Starter, Premium & Complete Editions
               </p>
-              <p className="text-[11px] font-sans text-stone-500 mt-1">
-                Optimized for Indian freelancers targeting domestic & foreign founders
+              <p className="text-[11px] font-sans text-stone-500 mt-0.5">
+                Deep Forest Green · Rich Burgundy · Deep Navy Blue with Platinum Foil Embossing
               </p>
             </div>
 

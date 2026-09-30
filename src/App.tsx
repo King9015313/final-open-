@@ -40,8 +40,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] text-[#1A252F] flex flex-col font-sans selection:bg-[#B8860B]/20 selection:text-[#1A252F]">
+    <div className="min-h-screen bg-[#FDFBF7] texture-paper-grain text-[#1A252F] flex flex-col font-sans selection:bg-[#B8860B]/20 selection:text-[#1A252F] relative overflow-x-hidden">
       
+      {/* Subtle Archival Paper Texture Overlay (Tactile Depth without flat plastic appearance) */}
+      <div 
+        className="pointer-events-none fixed inset-0 z-30 opacity-[0.02] mix-blend-multiply"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat'
+        }}
+        aria-hidden="true"
+      />
+
       {/* Sticky Top Reading Progress Bar */}
       <ReadingProgressBar />
 
@@ -49,7 +59,7 @@ export default function App() {
       <Navbar onCtaClick={() => handleOpenCheckout('premium')} />
 
       {/* Section 1: Hero Section */}
-      <main className="flex-1">
+      <main className="flex-1 pt-16 sm:pt-20">
         <Hero 
           onCtaClick={() => handleOpenCheckout('premium')}
           onPreviewClick={() => setIsSampleReaderOpen(true)}

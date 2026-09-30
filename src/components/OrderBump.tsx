@@ -19,7 +19,7 @@ export const OrderBump: React.FC<OrderBumpProps> = ({
   const activeChecked = isFreeBundleAddon ? true : isChecked;
 
   return (
-    <div className={`rounded-xl transition-all duration-200 ${
+    <div className={`rounded-xl transition-all duration-200 relative z-0 overflow-visible touch-pan-y ${
       isFreeBundleAddon
         ? 'bg-gradient-to-br from-emerald-50/80 via-white to-amber-50/50 border-2 border-emerald-600 shadow-md ring-1 ring-emerald-500/20'
         : activeChecked 
@@ -129,7 +129,7 @@ export const OrderBump: React.FC<OrderBumpProps> = ({
 
       {/* Expanded System Preview (Faithful to PDF 3) */}
       {showDetails && (
-        <div className="mt-4 pt-4 border-t border-stone-200 space-y-4 text-xs bg-white p-4 rounded-lg border border-stone-200">
+        <div className="mt-4 pt-4 border-t border-stone-200 space-y-4 text-xs bg-white p-4 rounded-lg border border-stone-200 relative z-0 overflow-visible touch-pan-y">
           <div>
             <h4 className="font-serif font-bold text-sm text-[#1A252F] mb-1">
               Edition I: The Core Playbook (Decision OS)

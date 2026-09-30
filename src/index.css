@@ -10,7 +10,11 @@ body {
   font-family: var(--font-sans);
   background-color: #FDFBF7;
   color: #1A252F;
+}
+
+html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 h1, h2, h3, .font-editorial {
@@ -165,5 +169,625 @@ input[type="range"]::-moz-range-thumb:hover {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+/* Subtle, eye-catching metallic shimmer and glowing pulse */
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmerSweep 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform;
+}
+
+@keyframes goldPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(212, 175, 55, 0.25), inset 0 0 6px rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.6), inset 0 0 10px rgba(212, 175, 55, 0.3);
+    border-color: rgba(242, 203, 104, 0.85);
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulseGlow 2.6s ease-in-out infinite;
+  will-change: box-shadow, border-color;
+}
+
+/* Subtle permanent metallic gradient shift for CLIENT READY title */
+@keyframes clientReadyGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-client-ready-gradient {
+  background: linear-gradient(110deg, #1A252F 0%, #1A252F 28%, #B8860B 48%, #E5C158 55%, #B8860B 62%, #1A252F 82%, #1A252F 100%);
+  background-size: 260% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: clientReadyGradientShift 7s ease-in-out infinite;
+  will-change: background-position;
+}
+
+/* Fluid, continuous metallic gradient shift for high-end headers */
+@keyframes fluidGoldShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fluid-gold-shift {
+  background-size: 250% 250%;
+  animation: fluidGoldShift 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: background-position;
+}
+
+/* Gentle perpetual golden aura glow */
+@keyframes perpetualGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scaleX(0.95);
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.35));
+  }
+  50% {
+    opacity: 0.95;
+    transform: scaleX(1.03);
+    filter: drop-shadow(0 0 14px rgba(242, 203, 104, 0.7));
+  }
+}
+
+.animate-perpetual-glow {
+  animation: perpetualGlow 4s ease-in-out infinite;
+  will-change: opacity, transform, filter;
+}
+
+/* Permanent, sophisticated metallic gold pulse & breathing glow for primary pay CTA */
+@keyframes payButtonGlow {
+  0%, 100% {
+    box-shadow: 0 4px 14px -2px rgba(14, 59, 51, 0.45), 0 0 10px 1px rgba(212, 175, 55, 0.25);
+    border-color: rgba(212, 175, 55, 0.45);
+  }
+  50% {
+    box-shadow: 0 6px 22px 0 rgba(14, 59, 51, 0.55), 0 0 22px 4px rgba(212, 175, 55, 0.55);
+    border-color: rgba(242, 203, 104, 0.9);
+  }
+}
+
+.animate-pay-button-glow {
+  animation: payButtonGlow 3s ease-in-out infinite;
+  will-change: box-shadow, border-color;
+}
+
+/* Continuous, premium metallic gold shift & gentle breathing pulse for DIGITALASSETSUITE */
+@keyframes digitalAssetSuiteGleam {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.15));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.15));
+  }
+}
+
+.animate-digital-asset-suite {
+  background: linear-gradient(
+    115deg, 
+    #1A252F 0%, 
+    #1A252F 24%, 
+    #9C731A 40%, 
+    #D4AF37 50%, 
+    #FFF4D0 55%, 
+    #D4AF37 60%, 
+    #9C731A 70%, 
+    #1A252F 86%, 
+    #1A252F 100%
+  );
+  background-size: 280% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: digitalAssetSuiteGleam 6s ease-in-out infinite;
+  will-change: background-position, filter;
+}
+
+/* High-end continuous fluid glow and border pulse for exclusivity banners */
+@keyframes luxuryBannerGleam {
+  0%, 100% {
+    box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.5), 0 0 14px 1px rgba(212, 175, 55, 0.22);
+    border-color: rgba(212, 175, 55, 0.5);
+  }
+  50% {
+    box-shadow: 0 12px 40px -4px rgba(0, 0, 0, 0.6), 0 0 28px 4px rgba(212, 175, 55, 0.5);
+    border-color: rgba(242, 203, 104, 0.9);
+  }
+}
+
+.animate-luxury-banner-glow {
+  animation: luxuryBannerGleam 4.5s ease-in-out infinite;
+  will-change: box-shadow, border-color;
+}
+
+/* Subtle continuous metallic light sweep across headline text */
+@keyframes headlineGoldShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-headline-gold-shift {
+  background: linear-gradient(
+    110deg,
+    #FFFFFF 0%,
+    #FFFFFF 20%,
+    #F3E5AB 35%,
+    #D4AF37 48%,
+    #FFF8D6 55%,
+    #D4AF37 62%,
+    #F3E5AB 75%,
+    #FFFFFF 90%,
+    #FFFFFF 100%
+  );
+  background-size: 260% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: headlineGoldShift 5.5s ease-in-out infinite;
+  will-change: background-position;
+}
+
+/* 3D Mockup Studio & Embossing Styles */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.perspective-1600 {
+  perspective: 1600px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* White & Silver Foil 3D letterpress embossing with deep deboss shadow & upper specular highlight */
+.embossed-white-title {
+  color: #FFFFFF;
+  font-weight: 900;
+  text-shadow: 
+    0 -1.5px 1px rgba(0, 0, 0, 0.85),
+    0 1.5px 2px rgba(255, 255, 255, 0.7),
+    0 3px 6px rgba(0, 0, 0, 0.75),
+    0 0 16px rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.04em;
+}
+
+/* High-End Platinum Foil Embossing with Ultra-Crisp Specular Luster */
+.platinum-foil-title {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 15%, #E2E8F0 35%, #94A3B8 50%, #F1F5F9 70%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.platinum-foil-subtext {
+  color: #F1F5F9;
+  text-shadow: 
+    0 -1px 1px rgba(0, 0, 0, 0.95), 
+    0 1px 1.5px rgba(255, 255, 255, 0.75), 
+    0 0 10px rgba(241, 245, 249, 0.45);
+}
+
+.platinum-foil-accent {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 40%, #94A3B8 100%);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+/* High-End Silver Foil Embossing with Chrome / Platinum Reflection */
+.silver-foil-title {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 20%, #CBD5E1 45%, #94A3B8 55%, #E2E8F0 75%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.silver-foil-subtext {
+  color: #E2E8F0;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.9), 0 1px 1px rgba(255, 255, 255, 0.6), 0 0 8px rgba(226, 232, 240, 0.35);
+}
+
+.silver-foil-accent {
+  background: linear-gradient(135deg, #F8FAFC 0%, #CBD5E1 50%, #64748B 100%);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Deep forest green textured hardcover cloth with rich buckram linen weave */
+.book-cloth-green {
+  background-color: #072B23;
+  background-image: 
+    radial-gradient(circle at 45% 25%, rgba(22, 92, 78, 0.85) 0%, rgba(10, 48, 40, 0.95) 55%, rgba(4, 22, 18, 1) 100%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0px, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 1px, transparent 1px, transparent 3px);
+  background-blend-mode: normal, overlay, multiply;
+}
+
+/* Rich burgundy textured hardcover cloth with rich buckram linen weave */
+.book-cloth-burgundy {
+  background-color: #380C16;
+  background-image: 
+    radial-gradient(circle at 45% 25%, rgba(120, 24, 46, 0.85) 0%, rgba(56, 12, 22, 0.95) 55%, rgba(26, 5, 10, 1) 100%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0px, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.09) 0px, rgba(0, 0, 0, 0.09) 1px, transparent 1px, transparent 3px);
+  background-blend-mode: normal, overlay, multiply;
+}
+
+/* Deep navy blue textured hardcover cloth with rich buckram linen weave */
+.book-cloth-navy {
+  background-color: #0A1C30;
+  background-image: 
+    radial-gradient(circle at 45% 25%, rgba(26, 68, 114, 0.85) 0%, rgba(10, 28, 48, 0.95) 55%, rgba(4, 12, 22, 1) 100%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0px, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 1px, transparent 1px, transparent 3px);
+  background-blend-mode: normal, overlay, multiply;
+}
+
+/* Pedestal metallic brushed disc & rim */
+.studio-pedestal-surface {
+  background: radial-gradient(circle at 50% 50%, #2A363F 0%, #172129 60%, #0F171D 100%);
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.85),
+    0 25px 50px -10px rgba(0, 0, 0, 0.75);
+}
+
+.studio-pedestal-rim {
+  background: linear-gradient(180deg, #D4AF37 0%, #9C7823 40%, #523F10 80%, #281F08 100%);
+}
+
+/* Subtle page paper texture */
+.workbook-paper-left {
+  background: linear-gradient(90deg, #EAE6DE 0%, #FAF8F5 14%, #FAF8F5 92%, #D8D4CA 100%);
+  box-shadow: inset -12px 0 18px -8px rgba(0, 0, 0, 0.15);
+}
+
+.workbook-paper-right {
+  background: linear-gradient(90deg, #D8D4CA 0%, #FAF8F5 8%, #FAF8F5 86%, #EAE6DE 100%);
+  box-shadow: inset 12px 0 18px -8px rgba(0, 0, 0, 0.15);
+}
+
+/* Studio light sheen sweep */
+@keyframes studioLightSweep {
+  0% { transform: translateX(-150%) skewX(-25deg); opacity: 0; }
+  20% { opacity: 0.35; }
+  50% { transform: translateX(250%) skewX(-25deg); opacity: 0; }
+  100% { transform: translateX(250%) skewX(-25deg); opacity: 0; }
+}
+
+.animate-sheen-sweep {
+  animation: studioLightSweep 7s ease-in-out infinite;
+}
+
+/* ============================================================= */
+/* CINEMATIC SPRING-BASED BOOK OPENING ANIMATION                 */
+/* Opens gracefully from spine with smooth acceleration & spring */
+/* ============================================================= */
+
+:root {
+  --ease-spring-book: cubic-bezier(0.24, 1.1, 0.34, 1);
+  --ease-spring-gentle: cubic-bezier(0.22, 1.05, 0.36, 1);
+  --ease-cinematic-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cinematic-cover-hinge {
+  transform-origin: 0% 50% 0px; /* Pivots directly from the spine edge */
+  transform-style: preserve-3d;
+  transition: 
+    transform 1380ms cubic-bezier(0.24, 1.1, 0.34, 1),
+    left 1380ms cubic-bezier(0.24, 1.1, 0.34, 1),
+    box-shadow 1380ms cubic-bezier(0.24, 1.1, 0.34, 1),
+    filter 1380ms cubic-bezier(0.24, 1.1, 0.34, 1);
+  will-change: transform, left, box-shadow;
+}
+
+.cinematic-book-spread {
+  transition: 
+    width 1380ms cubic-bezier(0.24, 1.1, 0.34, 1), 
+    transform 1380ms cubic-bezier(0.24, 1.1, 0.34, 1);
+  will-change: width, transform;
+}
+
+.cinematic-spine {
+  transition: 
+    left 1380ms cubic-bezier(0.24, 1.1, 0.34, 1), 
+    transform 1380ms cubic-bezier(0.24, 1.1, 0.34, 1);
+  will-change: left, transform;
+}
+
+.cinematic-cover-right {
+  transition: 
+    left 1380ms cubic-bezier(0.24, 1.1, 0.34, 1), 
+    width 1380ms cubic-bezier(0.24, 1.1, 0.34, 1);
+  will-change: left, width;
+}
+
+.cinematic-camera-rig {
+  transition: transform 1380ms cubic-bezier(0.24, 1.1, 0.34, 1);
+  will-change: transform;
+}
+
+/* Subtle blinking editorial typewriter cursor */
+@keyframes subtleCursorBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scaleY(0.92);
+  }
+}
+
+.animate-cursor-blink {
+  animation: subtleCursorBlink 0.9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: opacity, transform;
+}
+
+/* Dynamic lifting shadow that projects underneath the cover as it swings open */
+.cinematic-cover-lifting-shadow {
+  box-shadow: 
+    -18px 12px 35px -8px rgba(0, 0, 0, 0.6), 
+    -6px 4px 15px -2px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+.cinematic-cover-resting-shadow {
+  box-shadow: 
+    -4px 8px 25px -4px rgba(0, 0, 0, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.cinematic-cover-closed-shadow {
+  box-shadow: 
+    0 15px 35px -5px rgba(0, 0, 0, 0.65), 
+    0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Luminous specular flare sweep across the cover as it turns past the key light */
+@keyframes cinematicFoilGlint {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.65;
+  }
+  65% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-cinematic-foil-glint {
+  animation: cinematicFoilGlint 1.35s cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
+}
+
+/* Physical Page-Turn Transition & Paper Curl Dynamics */
+.transition-page-turn {
+  transition: transform 800ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow 800ms cubic-bezier(0.25, 1, 0.5, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.page-leaf-shadow {
+  box-shadow: -8px 0 20px -4px rgba(0, 0, 0, 0.35);
+}
+
+.pedestal-spin-transition {
+  transition: transform 850ms cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: transform;
+}
+
+/* 3D Isometric Problem-Solving Graphic Representation */
+.isometric-view-container {
+  perspective: 700px;
+  perspective-origin: 50% 40%;
+  transform-style: preserve-3d;
+}
+
+.isometric-rig {
+  transform: rotateX(54.7deg) rotateZ(-45deg);
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.isometric-plane {
+  transform-style: preserve-3d;
+  transition: all 400ms ease-out;
+}
+
+/* Metallic Platinum Foil Crest & Seal */
+.platinum-crest-ring {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(203, 213, 225, 0.08) 70%, transparent 100%);
+  border: 1px solid rgba(248, 250, 252, 0.75);
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.4),
+    inset 0 0 8px rgba(255, 255, 255, 0.25);
+}
+
+.platinum-embossed-border {
+  border: 1px solid rgba(241, 245, 249, 0.75);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.8),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================================= */
+/* HIGH-ENERGY BLUE & ORANGE DYNAMIC TEXT ANIMATION STYLES       */
+/* 'Stop Chasing Clients. Start Closing Them.'                   */
+/* ============================================================= */
+
+@keyframes vibrantGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes energyAuraPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(255, 107, 0, 0.45)) drop-shadow(0 0 35px rgba(249, 115, 22, 0.22));
+    opacity: 0.95;
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(255, 85, 0, 0.7)) drop-shadow(0 0 55px rgba(249, 115, 22, 0.4));
+    opacity: 1;
+  }
+}
+
+@keyframes blueReflect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes laserExpand {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes energySpark {
+  0% {
+    transform: translateY(0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.1) rotate(90deg);
+  }
+  100% {
+    transform: translateY(-16px) scale(0.4) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.text-gradient-pro-blue {
+  background: linear-gradient(135deg, #0A1E3F 0%, #1A365D 35%, #2563EB 70%, #1D4ED8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-vibrant-orange {
+  background: linear-gradient(90deg, #FF3D00 0%, #FF6D00 25%, #FF9100 50%, #FF5722 75%, #FF3D00 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: vibrantGradientMove 4s ease infinite;
+}
+
+.dynamic-energy-glow {
+  animation: energyAuraPulse 3s ease-in-out infinite;
+}
+
+.laser-underline-draw {
+  animation: laserExpand 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-energy-spark-1 {
+  animation: energySpark 2.4s ease-in-out infinite;
+}
+
+.animate-energy-spark-2 {
+  animation: energySpark 2.8s ease-in-out infinite 0.7s;
+}
+
+.animate-energy-spark-3 {
+  animation: energySpark 2.2s ease-in-out infinite 1.4s;
+}
+
+/* ============================================================= */
+/* INSTANT CHECKOUT MODAL CONTAINER RESPONSIVE SCROLL STYLES    */
+/* ============================================================= */
+.checkout-modal-container {
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 639px) {
+  /* On mobile devices: let the 'Instant Checkout · Lifetime Access' header move naturally with scroll */
+  .checkout-modal-container {
+    overflow-y: auto !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkout-modal-header {
+    position: relative !important;
+    top: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .checkout-modal-container form {
+    overflow-y: visible !important;
+    flex: none !important;
   }
 }

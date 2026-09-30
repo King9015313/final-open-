@@ -33,8 +33,14 @@ export const SolutionSection: React.FC<SolutionSectionProps> = ({ onOpenSampleRe
   ];
 
   return (
-    <section id="system" className="py-20 bg-[#FDFBF7]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="system" className="py-24 bg-[#FDFBF7] texture-paper-grain relative overflow-hidden">
+      {/* Subtle ambient lighting texture */}
+      <div 
+        aria-hidden="true"
+        className="absolute top-12 left-1/2 -translate-x-1/2 w-4/5 h-80 bg-gradient-to-b from-[#B8860B]/5 via-[#D4AF37]/3 to-transparent blur-3xl pointer-events-none rounded-full"
+      />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Section Header */}
         <ScrollReveal>
@@ -42,10 +48,10 @@ export const SolutionSection: React.FC<SolutionSectionProps> = ({ onOpenSampleRe
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B8860B] mb-3">
               The Blueprint
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#1A252F] tracking-tight [text-wrap:balance]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#1A252F] tracking-[-0.02em] leading-[1.15] [text-wrap:balance]">
               Introducing: The Client Ready System
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-stone-600 font-sans leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-stone-600 font-sans leading-[1.65]">
               A highly tactical, step-by-step framework built specifically for the Indian market context and international outreach. No motivational fluff. Just pure execution.
             </p>
           </div>
@@ -55,55 +61,55 @@ export const SolutionSection: React.FC<SolutionSectionProps> = ({ onOpenSampleRe
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           
           <ScrollReveal delayMs={100} className="h-full">
-            <div className="bg-white rounded-lg p-7 border border-stone-200/90 shadow-2xs hover-lift hover:border-stone-300 relative flex flex-col justify-between h-full">
+            <div className="card-interactive bg-gradient-to-b from-white to-[#FCFAF5]/80 rounded-xl p-7 border border-stone-200/90 shadow-xs relative flex flex-col justify-between h-full group">
               <div className="space-y-4">
                 <span className="text-xs font-serif italic text-[#B8860B] font-semibold">Pillar 01</span>
-                <h3 className="text-xl font-serif font-bold text-[#1A252F]">
+                <h3 className="text-xl font-serif font-bold text-[#1A252F] tracking-tight leading-snug">
                   The HRPA Framework
                 </h3>
-                <p className="text-sm text-stone-600 leading-relaxed">
+                <p className="text-sm text-stone-600 leading-relaxed font-sans">
                   Write proposals that actually get replies. Stop sending paragraphs of self-biography. Hook with an observed flaw, show Relevance, attach unsolicited Proof, and make an effortless Ask in 4 sentences.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-stone-100 text-xs font-medium text-[#2C3E50] flex items-center justify-between">
                 <span>Cuts pitch writing time to under 4 minutes</span>
-                <span className="text-[#B8860B] text-sm">✦</span>
+                <span className="text-[#B8860B] text-sm transition-transform duration-200 group-hover:scale-125">✦</span>
               </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delayMs={200} className="h-full">
-            <div className="bg-white rounded-lg p-7 border border-stone-200/90 shadow-2xs hover-lift hover:border-stone-300 relative flex flex-col justify-between h-full">
+            <div className="card-interactive bg-gradient-to-b from-white to-[#FCFAF5]/80 rounded-xl p-7 border border-stone-200/90 shadow-xs relative flex flex-col justify-between h-full group">
               <div className="space-y-4">
                 <span className="text-xs font-serif italic text-[#B8860B] font-semibold">Pillar 02</span>
-                <h3 className="text-xl font-serif font-bold text-[#1A252F]">
+                <h3 className="text-xl font-serif font-bold text-[#1A252F] tracking-tight leading-snug">
                   The No-Portfolio Trap
                 </h3>
-                <p className="text-sm text-stone-600 leading-relaxed">
+                <p className="text-sm text-stone-600 leading-relaxed font-sans">
                   How to build proof without permission using Targeted Spec Work. Learn the strict 2-hour rule, micro-project audits, and contra deals so you never wait for someone to hire you before having proof.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-stone-100 text-xs font-medium text-[#2C3E50] flex items-center justify-between">
                 <span>Re-use 1 spec sample across 4 marketing channels</span>
-                <span className="text-[#B8860B] text-sm">✦</span>
+                <span className="text-[#B8860B] text-sm transition-transform duration-200 group-hover:scale-125">✦</span>
               </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delayMs={300} className="h-full">
-            <div className="bg-white rounded-lg p-7 border border-stone-200/90 shadow-2xs hover-lift hover:border-stone-300 relative flex flex-col justify-between h-full">
+            <div className="card-interactive bg-gradient-to-b from-white to-[#FCFAF5]/80 rounded-xl p-7 border border-stone-200/90 shadow-xs relative flex flex-col justify-between h-full group">
               <div className="space-y-4">
                 <span className="text-xs font-serif italic text-[#B8860B] font-semibold">Pillar 03</span>
-                <h3 className="text-xl font-serif font-bold text-[#1A252F]">
+                <h3 className="text-xl font-serif font-bold text-[#1A252F] tracking-tight leading-snug">
                   The 30-Day Workbook
                 </h3>
-                <p className="text-sm text-stone-600 leading-relaxed">
+                <p className="text-sm text-stone-600 leading-relaxed font-sans">
                   Knowledge without execution is useless. Exactly one focused mission per day, with clear why-it-matters explanations and tracking boxes. Turns outreach into an automatic daily habit.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-stone-100 text-xs font-medium text-[#2C3E50] flex items-center justify-between">
-                <span>From undefined niche on Day 1 to published testimonial by Day 30</span>
-                <span className="text-[#B8860B] text-sm">✦</span>
+                <span>From undefined niche on Day 1 to signed retainer by Day 30</span>
+                <span className="text-[#B8860B] text-sm transition-transform duration-200 group-hover:scale-125">✦</span>
               </div>
             </div>
           </ScrollReveal>
