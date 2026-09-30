@@ -36,24 +36,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick }) => {
             aria-label="HM Digital Studio Store - DIGITALASSETSUITE"
           >
             {/* Perfectly sized logo fitting comfortably within the header with fixed shrink-0 protection */}
-            <div className="relative shrink-0 flex items-center justify-center p-0.5 sm:p-1 bg-white/90 rounded-md border border-stone-200/70 shadow-2xs transition-all duration-200 group-hover:shadow-xs group-hover:border-[#B8860B]/40 group-hover:scale-[1.02]">
-              <picture>
-                <source srcSet="/logo.svg" type="image/svg+xml" />
-                <source srcSet="/file_0000000092388211a7c0718a5d07d66e.webp" type="image/webp" />
-                <img 
-                  src="/file_0000000092388211a7c0718a5d07d66e.png"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/logo.svg';
-                  }}
-                  alt="HM Digital Studio Store Logo" 
-                  width="48"
-                  height="48"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="h-8 sm:h-11 w-auto max-w-[42px] sm:max-w-[56px] object-contain rounded-xs shrink-0"
-                />
-              </picture>
+            <div className="relative shrink-0 flex items-center justify-center p-0.5 sm:p-1 bg-white/95 rounded-md border border-stone-200/80 shadow-2xs transition-all duration-200 group-hover:shadow-xs group-hover:border-[#B8860B]/40 group-hover:scale-[1.02]">
+              <img 
+                src="/images/hm-digital-studio-logo.svg"
+                alt="HM Digital Studio Store Logo" 
+                width="48"
+                height="40"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="h-8 sm:h-10 md:h-11 w-auto max-w-[48px] sm:max-w-[58px] object-contain rounded-xs shrink-0 select-none"
+              />
             </div>
 
             {/* Brand Titles: separate container, guaranteed no overlap with logo, permanent metallic gradient shift */}
@@ -134,23 +127,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onCtaClick }) => {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-[#1A252F]/10 bg-[#FDFBF7] px-6 py-4 space-y-3 text-sm animate-hero-fade-up max-h-[calc(100vh-4rem)] sm:max-h-[calc(100vh-5rem)] overflow-y-auto shadow-lg">
           <div className="flex items-center gap-3 pb-3 border-b border-stone-200/70">
-            <div className="shrink-0 p-1 bg-white/90 rounded border border-stone-200/70 shadow-2xs">
-              <picture>
-                <source srcSet="/logo.svg" type="image/svg+xml" />
-                <source srcSet="/file_0000000092388211a7c0718a5d07d66e.webp" type="image/webp" />
-                <img 
-                  src="/file_0000000092388211a7c0718a5d07d66e.png"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/logo.svg';
-                  }}
-                  alt="HM Digital Studio Store Logo" 
-                  width="42"
-                  height="42"
-                  loading="lazy"
-                  decoding="async"
-                  className="h-9 w-auto max-w-[42px] object-contain rounded-xs shrink-0"
-                />
-              </picture>
+            <div className="shrink-0 p-1 bg-white/95 rounded-md border border-stone-200/80 shadow-2xs">
+              <img 
+                src="/images/hm-digital-studio-logo.svg"
+                alt="HM Digital Studio Store Logo" 
+                width="42"
+                height="35"
+                loading="lazy"
+                decoding="async"
+                className="h-9 w-auto max-w-[48px] object-contain rounded-xs shrink-0 select-none"
+              />
             </div>
             <div className="flex flex-col shrink-0 min-w-0">
               <span className="font-sans font-black text-xs sm:text-sm tracking-[0.06em] sm:tracking-[0.08em] uppercase leading-tight whitespace-nowrap animate-digital-asset-suite">
